@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner  in = new Scanner(System.in);
+        int test = in.nextInt();
+        while (test-- !=0)
+        {
+            int train = in.nextInt();
+            int number_of_bogi [] = new  int[10000];
+
+            for (int i = 0; i <train ; i++) {
+                number_of_bogi[i] = in.nextInt();
+
+            }
+            int count=0;
+            for (int i = 0; i <train ; i++) {
+                for (int j = 0; j <train-1 ; j++) {
+                    if(number_of_bogi[j]>number_of_bogi[j+1]) // 7 > 4
+                    {
+                        int temp = number_of_bogi[j+1]; // temp = 4;
+                        number_of_bogi[j+1]= number_of_bogi[j]; // nu[1]= 7
+                        number_of_bogi[j]= temp;
+                        ++count;
+                    }
+                }
+            }
+            System.out.println(String.format("Optimal train " +
+                    "swapping takes %d swaps.",count));
+        }
+    }
+}
