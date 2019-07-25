@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	 long long int n,m,p;
+	while(cin>>n>>m)
+	{
+	    if(n>m)
+	    {
+	        p=n-m;
+	        cout<<p<<endl;
+	    }
+	    else
+	    {
+	     p=m-n;
+	     cout<<p<<endl;
+	    }
+	}
+}
