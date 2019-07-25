@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+int i,j,k;
+while(cin>>i>>j>>k)
+{
+    if(i==j&&i==k)
+{
+    cout<<"*"<<endl;
+}
+if(i==j&&i!=k)
+{
+    cout<<"C"<<endl;
+}
+if(i==k&&i!=j)
+{
+    cout<<"B"<<endl;
+}
+if(i!=j&&i!=k)
+{
+    cout<<"A"<<endl;
+}
+}
+return 0;
+}
