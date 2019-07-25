@@ -1,0 +1,28 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+int main()
+{
+int t,i,j,sum;
+cin>>t;
+while(t--)
+{
+    sum=0;
+    cin>>i;
+    int a[i];
+    for(j=0;j<i;j++)
+    {
+       cin>>a[j];
+    }
+    sort(a,a+i);
+    reverse(a,a+i);
+    for(j=2;j<i;j=j+3)
+    {
+       sum=sum+a[j];
+    }
+    cout<<sum<<endl;
+
+}
+}
